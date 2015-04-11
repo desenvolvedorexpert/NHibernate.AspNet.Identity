@@ -1,15 +1,12 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using NHibernate.AspNet.Identity;
 using NHibernate.AspNet.Identity.Helpers;
 using NHibernate.AspNet.Web.Models;
 using NHibernate.Cfg;
 using NHibernate.Mapping.ByCode;
 using NHibernate.Tool.hbm2ddl;
-using SharpArch.Domain.DomainModel;
 using SharpArch.NHibernate;
-using System.Collections.Generic;
 
 namespace NHibernate.AspNet.Web
 {
@@ -45,7 +42,7 @@ namespace NHibernate.AspNet.Web
             // this NHibernate tool takes a configuration (with mapping info in)
             // and exports a database schema from it
             new SchemaExport(config)
-                .SetOutputFile(path)
+                //.SetOutputFile(path)
                 .Create(true, true /* DROP AND CREATE SCHEMA */);
         }
 
